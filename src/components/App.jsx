@@ -1,12 +1,10 @@
 import React from "react";
 import Header from "./Header";
-import DateCounter from "./DateCounter";
 
 export default function App(){
     return (
-        <div>
+        <div className="app">
             <Header/>
-            <DateCounter/>
             
         </div>
     )
