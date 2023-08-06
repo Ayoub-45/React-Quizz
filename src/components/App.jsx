@@ -11,6 +11,7 @@ const initalState = {
     //Loading,"error","ready","active","finished"
     status: "Loading",
     index: 0,
+    answer:null
 };
 function reducer(state, action) {
     switch (action.type) {
@@ -21,7 +22,9 @@ function reducer(state, action) {
             return { ...state, status: "error" };
         case "start":
             return { ...state, status: "active" };
-        default:
+        case "newAnswer":
+            return {...state}
+         default:
             throw new Error("Action is unkown");
     }
 }
@@ -38,7 +41,8 @@ export default function App() {
         <div className="app">
             <Header />
             <Main>
-                {status === "Loading" && <Loader />}
+                {stat
+                us === "Loading" && <Loader />}
                 {status === "error" && <Error />}
                 {status === "ready" && (
                     <StartScreen
