@@ -17,7 +17,7 @@ export default function App() {
 
     return (
         <div className="app">
-            <QuizProvider>
+        
             <Header />
             <Main>
                 {status === "Loading" && <Loader />}
@@ -39,7 +39,6 @@ export default function App() {
                     <FinishScreen/>
                 )}
             </Main>
-            </QuizProvider>
         </div>
     );
 }
